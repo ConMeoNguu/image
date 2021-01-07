@@ -12,9 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         .newDiv {
-            width: 25%;
-            border-right: 1px #e5e5e5 solid;
-            margin-bottom: 10px;
+            width: 100%;
             /* The width is 20%, by default */
         }
 
@@ -35,7 +33,7 @@
                 id="indexPage">10</span><button id="btnBack">back</button>
             <text id="load"></text>
         </div>
-        <div id="returnDiv"></div>
+        <div style="height: calc(100vh - 50px); overflow: auto;" id="returnDiv"></div>
         <!-- <div class="newDiv"><img id="image0" src="" class="newDiv">
             <video class="newDiv" controls id="video0" src="">
             </video>
