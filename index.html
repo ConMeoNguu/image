@@ -3516,8 +3516,8 @@
 
             const createdNewDiv = (dataSrc, count) => {
                 cleanDiv();
-                // maxNumber = dataSrc.length - count * numberItem >= 0 ? 10 : dataSrc.length - (count - 1) * numberItem;
-                maxNumber = dataSrc.length; 
+                maxNumber = dataSrc.length - count * numberItem >= 0 ? 10 : dataSrc.length - (count - 1) * numberItem;
+                // maxNumber = dataSrc.length; 
 
                 var newDiv = document.getElementById("returnDiv");
                 var htmlTable = "";
