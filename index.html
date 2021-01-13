@@ -3523,7 +3523,7 @@
                 var htmlTable = "";
                 for (var j = 0; j < maxNumber; j++) {
                     var countImage = (count - 1) * numberItem + j;
-                    const urlImage = dataSrc[countImage].Url || dataSrc[countImage].url;
+                    const urlImage = dataSrc[j].Url || dataSrc[countImage].url;
                     if (urlImage.search("mp4") > 0) {
                         var id = "video" + j;
                         htmlTable += "<div class='test'><div class='countDiv'><span>" + dataSrc[countImage].id + "<span></div><video id='" + id + "' class='newDiv' controls src='" + urlImage + "'></video></div>";
