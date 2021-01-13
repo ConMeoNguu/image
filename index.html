@@ -20,7 +20,32 @@
         @media screen and (max-width:800px) {
             .newDiv {
                 width: 100%;
+                margin: 0 10px;
             }
+
+            .test {
+                width: 100%;
+                /* height: 500px; */
+                margin: 0 10px;
+                position: relative;
+            }
+
+            .countDiv {
+                width: 30px;
+                height: 30px;
+                background: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .countDiv span {
+                color: white;
+                font-size: 20px;
+            }
+
         }
     </style>
 </head>
@@ -103,10 +128,11 @@
                     const urlImage = dataSrc[countImage].Url || dataSrc[countImage].url;
                     if (urlImage.search("mp4") > 0) {
                         var id = "video" + j;
-                        htmlTable += "<div class='newDiv'><video id='" + id + "' class='newDiv' controls src='" + urlImage + "'></video></div>";
+                        htmlTable += "<div class='test'><div class='countDiv'><span>" + countImage + "<span></div><video id='" + id + "' class='newDiv' controls src='" + urlImage + "'></video></div>";
+                        // htmlTable += "<div class='test'><div class='countDiv'><span>" + countImage + "<span></div><p>asdfghjklzxcvbnm,</p></div>";
                     } else {
                         var id = "image" + j;
-                        htmlTable += "<div class='newDiv'><img id='" + id + "' src='" + urlImage + "' class='newDiv'></div>";
+                        htmlTable += "<div class='test'><img id='" + id + "' src='" + urlImage + "' class='newDiv'></div>";
                     }
 
                 }
